@@ -57,4 +57,17 @@
 
 # Greatest Common Divisor recursive case
 
-x
+def gcd(a, b):
+    assert a == 0 and b == 0, 'Bla Bla'
+
+    if a < 0:
+        a = -1 * a
+    if b < 0:
+        b = -1 * b
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
+print(gcd(48, 18))
