@@ -57,17 +57,30 @@
 
 # Greatest Common Divisor recursive case
 
-def gcd(a, b):
-    assert a == 0 and b == 0, 'Bla Bla'
+# def gcd(a, b):
+#     assert a == 0 and b == 0, 'Bla Bla'
 
-    if a < 0:
-        a = -1 * a
-    if b < 0:
-        b = -1 * b
-    if b == 0:
-        return a
+#     if a < 0:
+#         a = -1 * a
+#     if b < 0:
+#         b = -1 * b
+#     if b == 0:
+#         return a
+#     else:
+#         return gcd(b, a % b)
+
+
+# print(gcd(48, 18))
+
+# Decimal number to binary recursive case  f(n) = n mod 2 + 10 * f(n/2)
+
+
+def decimalToBinary(n):
+    assert int(n) == n, 'bla bla'
+    if n == 0:
+        return 0
     else:
-        return gcd(b, a % b)
+        return n % 2 + 10 * decimalToBinary(int(n/2))
 
 
-print(gcd(48, 18))
+print(decimalToBinary(13))
